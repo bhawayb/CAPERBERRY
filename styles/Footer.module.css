@@ -1,0 +1,36 @@
+.footer {
+  width: auto;
+  margin-top: 10px;
+  background-color: black;
+}
+.innerFooter {
+  margin-bottom: 200px;
+}
+.socialLinks {
+  display: flex;
+}
+.socialLinks ul {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 30px;
+  margin: auto;
+}
+.socialItems {
+  list-style: none;
+}
+.socialItems a {
+  padding: 10px 40px;
+  font-size: 20px;
+  color: aqua;
+}
+.socialItems a:hover {
+  color: beige;
+}
+.outerFooter {
+  background-color: darkgray;
+  padding: 10px;
+  text-align: center;
+  color: aliceblue;
+}

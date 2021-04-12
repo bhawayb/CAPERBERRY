@@ -1,0 +1,42 @@
+.nav {
+  height: 100px;
+  padding: 20px;
+  background: pink;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav li {
+  list-style: none;
+  padding: 20px;
+  font-size: 25px;
+  /* transition: border 1s; */
+}
+.nav :first-child {
+  flex-grow: 1;
+}
+.nav :last-child {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.nav li:first-child {
+  font-size: 40px;
+}
+.nav ul li a {
+  margin: 5px 15px;
+}
+/* // hover conditions */
+.nav li span:hover {
+  border-bottom: 2px solid black;
+}
+/* // make navbar stick */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(231, 225, 225, 0.98);
+  z-index: 50;
+}
