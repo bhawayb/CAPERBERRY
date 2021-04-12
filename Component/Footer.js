@@ -44,18 +44,6 @@ export default function Footer() {
           Copyright &copy; CAPERBERRY .All Rights Reserved
         </div>
       </footer>
-      {/* <li className={fstyles.socialItems}>
-                <Link href="/">blog</Link>
-                <i className="fas fa-blog"></i>
-              </li> */}
-      {/* <li className={fstyles.socialItems}>
-                <Link href="/">ig</Link>
-                <i className="fab fa-instagram"></i>
-              </li> */}
-      {/* <li className={fstyles.socialItems}>
-                <Link href="/">Yt</Link>
-                <i className="fab fa-youtube"></i>
-              </li> */}
     </>
   );
 }

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import cardStyles from "../styles/Cards.module.css";
+import Link from "next/link";
 const res = () => {
   // array bnalenge objects ka// with product object consists of
   //object-->
@@ -16,38 +17,33 @@ const res = () => {
   var product1 = new productso(
     1,
     "planter1",
-    "../public/images/pic1.jpg",
+    "/images/pic1.jpg",
     "this is 1st plant"
   );
   var product2 = new productso(
     2,
     "planter2",
-    "../public/images/pic1.jpg",
+    "/images/pic1.jpg",
     "this is 2nd plant"
   );
   var product3 = new productso(
     3,
     "planter3",
-    "../public/images/pic1.jpg",
+    "/images/pic1.jpg",
     "this is 3rd plant"
   );
   var product4 = new productso(
     4,
     "planter4",
-    "../public/images/pic1.jpg",
+    "/images/pic1.jpg",
     "this is 4th plant"
   );
   let products = [product1, product2, product3, product4];
-  console.log(products);
+
   const list = products.map((product) => {
-    console.log(String(product.imageLink));
     return (
-      <div className="card" key={product.id}>
-        <img
-          src={String(product.imageLink)}
-          className="card-img-top"
-          alt="..."
-        />
+      <a href="#" className="card" key={product.id}>
+        <img src={product.imageLink} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{product.name}</h5>
           <p className="card-text">{product.desc}</p>
@@ -55,7 +51,7 @@ const res = () => {
             Go somewhere
           </a>
         </div>
-      </div>
+      </a>
     );
   });
 
@@ -84,10 +80,15 @@ const res = () => {
           crossorigin="anonymous"
         ></script>
       </Head>
-      {/* saari list display ho jygi  */}
-      {/* just have to manage the space */}
-      {/* {list} */}
-      <div>{list}</div>
+
+      <Link href="/categories/planters"> Planters</Link>
+      <div className={cardStyles.stack}>{list}</div>
+
+      <Link href="/categories/containers"> Containers</Link>
+      <div className={cardStyles.stack}>{list}</div>
+
+      <Link href="/categories/gifting"> Giftings</Link>
+      <div className={cardStyles.stack}>{list}</div>
     </>
   );
 };

@@ -39,5 +39,7 @@ ion-icon {
   /* vertical-align: -.125em; */
 }
 .card {
-  width: 18em;
+  width: 20em;
+  padding: 10px;
+  margin: auto;
 }
