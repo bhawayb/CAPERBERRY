@@ -116,6 +116,7 @@
 .row {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
   max-width: 1140px;
+  background-color: #fff5ee;
 }
 
 .row:before,
@@ -141,7 +142,7 @@
 .why {
   text-align: center;
   font-size: 200%;
-  margin-bottom: 20px;
+  margin: auto;
 }
 
 .giveMargin {
@@ -156,6 +157,16 @@
 .fixHt {
   height: 390px;
 }
+/* category and corousels  start*/
+.category {
+  /* max-width: 1500px; */
+  height: auto;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #fffacd;
+  padding: 20px;
+}
+/* category and corousels end */
 @media (max-width: 600px) {
   .grid {
     width: 100%;

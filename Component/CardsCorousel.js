@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import cstyle from "../styles/CardsCorousel.module.css";
 export default function CardsCorousel() {
   const responsive = {
     superLargeDesktop: {
@@ -75,12 +76,12 @@ export default function CardsCorousel() {
       <Carousel
         swipeable={false}
         draggable={false}
-        // showDots={true}
+        showDots={true}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={1000}
+        autoPlaySpeed={2000}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
@@ -90,9 +91,9 @@ export default function CardsCorousel() {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        <div>
+        <div className={cstyle.stack}>
           {" "}
-          <div href="#" className="card" key={product1.id}>
+          <div className="card" key={product1.id}>
             <img src={product1.imageLink} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{product1.name}</h5>
@@ -103,9 +104,9 @@ export default function CardsCorousel() {
             </div>
           </div>
         </div>
-        <div>
+        <div className={cstyle.stack}>
           {" "}
-          <div href="#" className="card" key={product2.id}>
+          <div className="card" key={product2.id}>
             <img src={product2.imageLink} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{product2.name}</h5>
@@ -116,9 +117,9 @@ export default function CardsCorousel() {
             </div>
           </div>
         </div>
-        <div>
+        <div className={cstyle.stack}>
           {" "}
-          <div href="#" className="card" key={product3.id}>
+          <div className="card" key={product3.id}>
             <img src={product3.imageLink} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{product3.name}</h5>
@@ -129,9 +130,9 @@ export default function CardsCorousel() {
             </div>
           </div>
         </div>
-        <div>
+        <div className={cstyle.stack}>
           {" "}
-          <div href="#" className="card" key={product4.id}>
+          <div className="card" key={product4.id}>
             <img src={product4.imageLink} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{product4.name}</h5>

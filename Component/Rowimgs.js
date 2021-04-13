@@ -8,7 +8,9 @@ export default function Rowimgs() {
   return (
     <>
       <div className={imgStyles.insta}>
-        <a href="/"> INSTAGRAM @Caperberry</a>
+        <h3>
+          <a href="/"> INSTAGRAM @Caperberry</a>
+        </h3>
         <section className={imgStyles.sectionMeals}>
           <ul
             className={imgStyles.mealsshowcase}

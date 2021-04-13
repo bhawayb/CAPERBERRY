@@ -70,17 +70,30 @@ export default function Home() {
         </div>
       </div> */}
       {/* <div className={styles.fixHt}>hey</div> */}
-      <div>
-        <Link href="/categories/planters">Planters</Link>
-        <CardsCorousel></CardsCorousel>
+      <div className={styles.category}>
+        <h2>
+          <Link href="/categories/planters">Planters</Link>
+        </h2>
+        <div>
+          <CardsCorousel></CardsCorousel>
+        </div>
       </div>
-      <div>
-        <a>Containers</a>
-        <CardsCorousel></CardsCorousel>
+      <div className={styles.category}>
+        <h2>
+          {" "}
+          <Link href="/categories/containers">Containers</Link>
+        </h2>
+        <div>
+          <CardsCorousel></CardsCorousel>
+        </div>
       </div>
-      <div>
-        <a>Giftings</a>
-        <CardsCorousel></CardsCorousel>
+      <div className={styles.category}>
+        <h2>
+          <Link href="/categories/gifting">Giftings</Link>
+        </h2>
+        <div>
+          <CardsCorousel></CardsCorousel>
+        </div>
       </div>
       <Rowimg></Rowimg>
       {/* <Image
