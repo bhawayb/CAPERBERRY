@@ -3,7 +3,9 @@ import styles from "../styles/Home.module.css";
 import CountUp from "react-countup";
 import Rowimg from "../Component/Rowimgs";
 import Card from "../Component/Cards";
-import Corousel from "../Component/Corousels";
+// import Corousel from "../Component/Corousels";
+import CardsCorousel from "../Component/CardsCorousel";
+import Link from "next/link";
 export default function Home() {
   return (
     <>
@@ -20,6 +22,7 @@ export default function Home() {
       {/* <div>
         <Corousel></Corousel>
       </div> */}
+
       <div className="row">
         <h2 className={styles.why}>WHY CAPERBERRY?</h2>
       </div>
@@ -67,11 +70,19 @@ export default function Home() {
         </div>
       </div> */}
       {/* <div className={styles.fixHt}>hey</div> */}
-
-      <Card></Card>
-
+      <div>
+        <Link href="/categories/planters">Planters</Link>
+        <CardsCorousel></CardsCorousel>
+      </div>
+      <div>
+        <a>Containers</a>
+        <CardsCorousel></CardsCorousel>
+      </div>
+      <div>
+        <a>Giftings</a>
+        <CardsCorousel></CardsCorousel>
+      </div>
       <Rowimg></Rowimg>
-
       {/* <Image
         src="/images/planters.jpg"
         alt="Picture of the author"
@@ -119,7 +130,6 @@ export default function Home() {
           </a>
         </div>
       </main> */}
-
       {/* <footer className={styles.footer}></footer> */}
     </>
   );
