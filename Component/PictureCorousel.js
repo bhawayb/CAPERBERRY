@@ -1,60 +1,31 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import cstyle from "../styles/CardsCorousel.module.css";
-import Card from "../Component/Cards";
-export default function CardsCorousel() {
+
+export default function PictureCorousel() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      slidesToSlide: 3, // optional, default to 1.
+      items: 1,
+      //   slidesToSlide: 3, // optional, default to 1.
     },
     tablet: {
       breakpoint: { max: 1024, min: 664 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
+      items: 1,
+      //   slidesToSlide: 2, // optional, default to 1.
     },
     mobile: {
       breakpoint: { max: 664, min: 0 },
       items: 1,
-      slidesToSlide: 1, // optional, default to 1.
+      //   slidesToSlide: 1, // optional, default to 1.
     },
   };
-  function productso(id, name, imageLink, desc) {
-    this.id = id;
-    this.name = name;
-    this.imageLink = imageLink;
-    this.desc = desc;
-  }
-  //1. object id
-  //2. product image
-  //3. product name
-  //4. product description
-  var product1 = new productso(
-    1,
-    "planter1",
+
+  let imgl = [
+    "images/pic4.jpg",
+    "images/pic2.jpg",
+    "images/pic3.jpg",
     "/images/pic1.jpg",
-    "this is 1st plant"
-  );
-  var product2 = new productso(
-    2,
-    "planter2",
-    "/images/pic2.jpg",
-    "this is 2nd plant"
-  );
-  var product3 = new productso(
-    3,
-    "planter3",
-    "/images/pic3.jpg",
-    "this is 3rd plant"
-  );
-  var product4 = new productso(
-    4,
-    "planter4",
-    "/images/pic4.jpg",
-    "this is 4th plant"
-  );
-  let products = [product1, product2, product3, product4];
+  ];
   return (
     <>
       <div>
@@ -78,16 +49,16 @@ export default function CardsCorousel() {
           itemClass="carousel-item-padding-40-px"
         >
           <div>
-            <Card product={product1}></Card>
+            <img className="plants" src={imgl[0]}></img>
           </div>
           <div>
-            <Card product={product2}> </Card>
+            <img className="plants" src={imgl[1]}></img>
           </div>
           <div>
-            <Card product={product3}></Card>
+            <img className="plants" src={imgl[2]}></img>
           </div>
           <div>
-            <Card product={product4}></Card>
+            <img className="plants" src={imgl[3]}></img>
           </div>
         </Carousel>
       </div>

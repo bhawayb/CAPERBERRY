@@ -2,8 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import CountUp from "react-countup";
 import Rowimg from "../Component/Rowimgs";
-import Card from "../Component/Cards";
-// import Corousel from "../Component/Corousels";
+import PictureCorousel from "../Component/PictureCorousel";
 import CardsCorousel from "../Component/CardsCorousel";
 import Link from "next/link";
 export default function Home() {
@@ -18,11 +17,9 @@ export default function Home() {
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       </Head>
-      <img className={styles.plants} src="/images/plants.jpg"></img>
-      {/* <div>
-        <Corousel></Corousel>
-      </div> */}
+      {/* <img className={styles.plants} src="/images/plants.jpg"></img> */}
 
+      <PictureCorousel></PictureCorousel>
       <div className="row">
         <h2 className={styles.why}>WHY CAPERBERRY?</h2>
       </div>
