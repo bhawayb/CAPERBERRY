@@ -26,8 +26,8 @@ const res = ({ product }) => {
           </a>
         </div>
       </div> */}
-      <Card key={product.id}>
-        <style jsx>{' width: "18rem" '}</style>
+      <Card className={cardStyles.card} key={product.id}>
+        {/* <style jsx>{' width: "20rem" '}</style> */}
         <Card.Img variant="top" src={product.imageLink} />
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>

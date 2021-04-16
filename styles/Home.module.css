@@ -117,6 +117,7 @@
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
   max-width: 1140px;
   background-color: #fff5ee;
+  margin-top: 10px;
 }
 
 .row:before,
@@ -140,19 +141,18 @@
   margin-bottom: 50px;
 }
 .why {
-  text-align: center;
-  font-size: 200%;
-  margin: auto;
+  margin: 20px 0;
 }
 
 .giveMargin {
   margin-top: 60px;
 }
 .iconBig {
-  font-size: 400%;
+  font-size: 150%;
   display: block;
   text-align: center;
-  margin-bottom: 10px;
+
+  margin: 10px auto;
 }
 .fixHt {
   height: 390px;
@@ -160,11 +160,14 @@
 /* category and corousels  start*/
 .category {
   /* max-width: 1500px; */
-
-  margin: 10px;
+  margin: 10px 100px;
   border-radius: 20px;
   background-color: #fffacd;
   padding: 20px;
+}
+.icons {
+  width: 100%;
+  text-align: center;
 }
 /* category and corousels end */
 @media (max-width: 600px) {

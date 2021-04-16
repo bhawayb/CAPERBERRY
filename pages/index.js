@@ -4,69 +4,63 @@ import CountUp from "react-countup";
 import Rowimg from "../Component/Rowimgs";
 import PictureCorousel from "../Component/PictureCorousel";
 import CardsCorousel from "../Component/CardsCorousel";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 import Link from "next/link";
 export default function Home() {
   return (
     <>
       <Head>
         <title>CAPERBERRY</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       </Head>
-      {/* <img className={styles.plants} src="/images/plants.jpg"></img> */}
 
       <PictureCorousel></PictureCorousel>
-      <div className="row">
-        <h2 className={styles.why}>WHY CAPERBERRY?</h2>
-      </div>
-      <div className="row">
-        <div className="col sm">
-          <i className={styles.iconBig} className="fab fa-envira"></i>
-          <h3>
-            <CountUp end={100}></CountUp>
-          </h3>
-          <h3> EACH PIECE IS UNIQUE </h3>
-          <p> Discover one of a kind, limited edition pieces</p>
-        </div>
-        <div className="col sm">
-          <i className={styles.iconBig} className="fas fa-hands"></i>
-          <h3>
-            <CountUp end={100}></CountUp>
-          </h3>
-          <h3> HANDCRAFTED</h3>
+      <div className={styles.why}>
+        {" "}
+        <Container>
+          <Row>
+            <Col>
+              <h2>WHY CAPERBERRY?</h2>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              {" "}
+              <div className={styles.iconBig}>
+                <i className="fab fa-envira "></i>
+              </div>
+              <h3>
+                <CountUp end={100}></CountUp>
+              </h3>
+              <h3> EACH PIECE IS UNIQUE </h3>
+              <p> Discover one of a kind, limited edition pieces</p>
+            </Col>
+            <Col>
+              <div className={styles.iconBig}>
+                <i className="fas fa-hands"></i>
+              </div>
+              <h3>
+                <CountUp end={100}></CountUp>
+              </h3>
+              <h3> HANDCRAFTED</h3>
 
-          <p> Each Piece is Made With a lot of love and care</p>
-        </div>
-        <div className="col sm">
-          <i className={styles.iconBig} className="fas fa-microphone"></i>
-          <h3>
-            <CountUp end={100}></CountUp>
-          </h3>
-          <h3>VOCAL FOR LOCAL</h3>
-          <p>Support homegrown brands that follow ethical practices</p>
-        </div>
+              <p> Each Piece is Made With a lot of love and care</p>
+            </Col>
+            <Col>
+              <div className={styles.iconBig}>
+                <i className="fas fa-microphone "></i>
+              </div>
+              <h3>
+                <CountUp end={100}></CountUp>
+              </h3>
+              <h3>VOCAL FOR LOCAL</h3>
+              <p>Support homegrown brands that follow ethical practices</p>
+            </Col>
+          </Row>
+        </Container>
       </div>
-      {/* <div className="container">
-        <div className="row align-items-start">
-          <div className="col">
-            <i className={styles.iconBig} className="fab fa-envira"></i>
-            One of three columns
-          </div>
-          <div className="col">
-            <i className={styles.iconBig} className="fab fa-envira"></i>
-            One of three columns
-          </div>
-          <div className="col">
-            <i className={styles.iconBig} className="fab fa-envira"></i>
-            One of three columns
-          </div>
-        </div>
-      </div> */}
-      {/* <div className={styles.fixHt}>hey</div> */}
+
       <div className={styles.category}>
         <h2>
           <Link href="/categories/planters">Planters</Link>

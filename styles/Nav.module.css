@@ -40,3 +40,7 @@
   background-color: rgb(231, 225, 225, 0.98);
   z-index: 50;
 }
+
+.header a {
+  font-size: 150%;
+}

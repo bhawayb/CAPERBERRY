@@ -23,12 +23,15 @@ export default function PictureCorousel() {
   let imgl = [
     "images/pic4.jpg",
     "images/pic2.jpg",
-    "images/pic3.jpg",
-    "/images/pic1.jpg",
+    "images/pic4.jpg",
+    "/images/pic2.jpg",
   ];
   return (
     <>
       <div>
+        <style jsx>{`
+          height: 600px;
+        `}</style>
         <Carousel
           swipeable={false}
           draggable={false}
