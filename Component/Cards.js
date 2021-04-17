@@ -7,25 +7,6 @@ const res = ({ product }) => {
   return (
     <>
       <Head></Head>
-
-      {/* <Link href="/categories/planters"> Planters</Link>
-      <div className={cardStyles.stack}>{list}</div>
-
-      <Link href="/categories/containers"> Containers</Link>
-      <div className={cardStyles.stack}>{list}</div>
-
-      <Link href="/categories/gifting"> Giftings</Link>
-      <div className={cardStyles.stack}>{list}</div> */}
-      {/* <div className="card" key={product.id}>
-        <img src={product.imageLink} className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">{product.name}</h5>
-          <p className="card-text">{product.desc}</p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
-        </div>
-      </div> */}
       <Card className={cardStyles.card} key={product.id}>
         {/* <style jsx>{' width: "20rem" '}</style> */}
         <Card.Img variant="top" src={product.imageLink} />
