@@ -3,6 +3,7 @@ export default function Corousels() {
   return (
     <>
       <Carousel>
+        <style jsx>{"position:fixed"}</style>
         <Carousel.Item>
           <img
             className="d-block w-100"

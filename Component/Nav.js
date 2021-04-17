@@ -2,12 +2,10 @@ import Link from "next/link";
 import navStyles from "../styles/Nav.module.css";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-import Navbar from "react-bootstrap/Navbar";
+import { CSSTransition } from "react-transition-group";
 
 const Nav = () => {
-  const [scrollDir, setScrollDir] = useState(
-    "navbar navbar-expand-lg navbar-light bg-light"
-  );
+  const [scrollDir, setScrollDir] = useState("");
 
   useEffect(() => {
     const threshold = 0;
@@ -21,11 +19,7 @@ const Nav = () => {
         ticking = false;
         return;
       }
-      setScrollDir(
-        scrollY > lastScrollY
-          ? "navbar navbar-expand-lg navbar-light bg-light"
-          : " anim navbar fixed-top navbar-expand-lg navbar-light bg-light"
-      );
+      setScrollDir(scrollY > lastScrollY ? "" : "fixed-top");
 
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;
@@ -45,7 +39,9 @@ const Nav = () => {
   return (
     <>
       <div className={navStyles.header}>
-        <nav class={scrollDir}>
+        <nav
+          class={`navbar ${scrollDir} navbar-expand-lg navbar-light bg-light`}
+        >
           <div class="container-fluid">
             <a class="navbar-brand" href="/blog">
               CAPERBERRY
