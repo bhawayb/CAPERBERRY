@@ -19,7 +19,7 @@ const Nav = () => {
         ticking = false;
         return;
       }
-      setScrollDir(scrollY > lastScrollY ? "" : "fixed-top");
+      setScrollDir(scrollY > 680 && scrollY < lastScrollY ? "fixed-top" : "");
 
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;

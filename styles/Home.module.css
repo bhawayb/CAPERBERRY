@@ -170,6 +170,12 @@
   text-align: center;
 }
 /* category and corousels end */
+
+.discount {
+  height: fit-content;
+  /* color: #eaeaea; */
+  background-color: pink;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;

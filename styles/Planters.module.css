@@ -1,0 +1,5 @@
+.rootCard {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 70px;
+}

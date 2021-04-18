@@ -15,6 +15,15 @@ export default function Home() {
         <title>CAPERBERRY</title>
       </Head>
 
+      <div className={styles.discount}>
+        <p>
+          {" "}
+          <style jsx>{`
+            margin-left: 20px;
+          `}</style>
+          Avail Free Delivery On Purchase of 999/- and Above
+        </p>
+      </div>
       <PictureCorousel></PictureCorousel>
       <div className={styles.why}>
         {" "}
