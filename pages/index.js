@@ -20,6 +20,7 @@ export default function Home() {
           {" "}
           <style jsx>{`
             margin-left: 20px;
+            padding: 3px 0;
           `}</style>
           Avail Free Delivery On Purchase of 999/- and Above
         </p>

@@ -5,45 +5,53 @@ import Head from "next/head";
 export default function Footer() {
   return (
     <>
-      <Head></Head>
-      <footer className={fstyles.footer}>
+      <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <div className={fstyles.footerHead}>
         <div className={fstyles.innerFooter}>
-          <div className={fstyles.socialLinks}>
-            <ul>
-              <li className={fstyles.socialItems}>
-                <a href=" ">
-                  <i className="fab fa-facebook"></i>
-                  Facebook
-                </a>
-              </li>
+          <h2>You have Made a Conscious Choice</h2>
+          <h2>Connect With Us</h2>
 
-              <li className={fstyles.socialItems}>
-                <a href=" ">
-                  <i className="fab fa-instagram"></i>
-                  Instagram
-                </a>
-              </li>
-
-              <li className={fstyles.socialItems}>
-                <a href=" ">
-                  <i className="fab fa-youtube"></i>
-                  YouTube
-                </a>
-              </li>
-
-              <li className={fstyles.socialItems}>
-                <a href=" ">
-                  <i className="fas fa-blog"></i>
-                  Blog
-                </a>
-              </li>
-            </ul>
+          <div>
+            {" "}
+            <h4>@ Caperberry</h4>
+          </div>
+          <div className={fstyles.socialHandle}>
+            <span>
+              {" "}
+              <a href="/blog" className={fstyles.icon}>
+                <i className="fab fa-instagram"></i>
+              </a>
+            </span>
+            <span>
+              <a href="/blog" className={fstyles.icon}>
+                {" "}
+                <i className="fab fa-facebook-square"></i>
+              </a>
+            </span>
+          </div>
+          <div className={fstyles.written}>
+            <div>
+              For Collaborations <a>x@gmail.com</a>
+            </div>
+            <div>
+              For Bulk Orders <a>y@gmail.com</a>
+            </div>
+            <div>
+              Wanna Work With Us ? <a>z@gmail.com</a>
+            </div>
+            <div>Any Queries Contact - 66666666</div>
           </div>
         </div>
         <div className={fstyles.outerFooter}>
-          Copyright &copy; CAPERBERRY .All Rights Reserved
+          CopyRights are Reserved @ Caperberry
         </div>
-      </footer>
+      </div>
     </>
   );
 }

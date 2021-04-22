@@ -22,12 +22,11 @@ h2 {
   text-align: center;
   margin-bottom: 0;
 }
-ion-icon {
-  color: blue;
-}
+
 .svg-inline--fa {
   font-size: 400%;
   height: 1em;
+  margin: 0 10px;
 }
 .ht {
   height: 300px;
@@ -41,10 +40,10 @@ ion-icon {
   background-size: cover;
   background-position: center;
 }
-i {
+/* i {
   width: 100%;
   text-align: center;
-}
+} */
 .navbar {
   padding: 1rem 2rem;
 }
