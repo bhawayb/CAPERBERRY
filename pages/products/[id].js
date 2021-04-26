@@ -1,6 +1,18 @@
-import Cards from "../../Component/Cards";
-import pStyles from "../../styles/Planters.module.css";
-export default function planters() {
+import Product from "../../Component/Product";
+export default function products({ data }) {
+  //   console.log(data);
+
+  return (
+    <div>
+      {/* <div> {data.name}</div>
+      <img src={data.img}></img>
+      <div>{data.desc}</div> */}
+      <Product data={data}></Product>
+    </div>
+  );
+}
+
+export async function getStaticProps({ params }) {
   function productso(id, name, imageLink, desc) {
     this.id = id;
     this.name = name;
@@ -14,7 +26,7 @@ export default function planters() {
   var product1 = new productso(
     1,
     "planter1",
-    "/images/pic2.jpg",
+    "/images/pic1.jpg",
     "this is 1st plant"
   );
   var product2 = new productso(
@@ -26,13 +38,13 @@ export default function planters() {
   var product3 = new productso(
     3,
     "planter3",
-    "/images/pic2.jpg",
+    "/images/pic3.jpg",
     "this is 3rd plant"
   );
   var product4 = new productso(
     4,
     "planter4",
-    "/images/pic2.jpg",
+    "/images/pic4.jpg",
     "this is 4th plant"
   );
   var product5 = new productso(
@@ -140,15 +152,41 @@ export default function planters() {
     product17,
     product18,
   ];
-  let products1 = [product1, product2, product3, product4];
+  //   console.log(products[params.id - 1].json());
 
-  return (
-    <>
-      <div className={pStyles.rootCard}>
-        {products.map((p) => {
-          return <Cards product={p}></Cards>;
-        })}
-      </div>
-    </>
-  );
+  const name = products[params.id - 1].name;
+  const desc = products[params.id - 1].desc;
+  const img = products[params.id - 1].imageLink;
+  //   console.log(postData);
+
+  return {
+    props: {
+      data: {
+        name,
+        desc,
+        img,
+      },
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  //   const paths = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+  return {
+    paths: [
+      {
+        params: {
+          id: "1",
+          id: "2",
+          id: "3",
+          id: "4",
+          id: "5",
+          id: "6",
+          id: "7",
+          id: "8",
+        },
+      },
+    ],
+    fallback: true,
+  };
 }

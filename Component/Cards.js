@@ -13,7 +13,11 @@ const res = ({ product }) => {
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>
           <Card.Text>{product.desc}</Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="light">
+            <Link href={`/products/[id]`} as={`/products/${product.id}`}>
+              View Product
+            </Link>
+          </Button>
         </Card.Body>
       </Card>
     </>
