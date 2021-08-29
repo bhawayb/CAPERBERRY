@@ -3,7 +3,7 @@ import Image from "next/image";
 import imgStyles from "../styles/Rowimgs.module.css";
 // import img from "../public/images/plants.jpg";
 
-//  can do 1 thoing that image home se mangwa ke loop chala ke bhejdo
+//  can do 1 thing that image home se mangwa ke loop chala ke bhejdo
 export default function Rowimgs() {
   return (
     <>
