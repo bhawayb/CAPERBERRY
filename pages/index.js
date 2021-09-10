@@ -8,7 +8,10 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Link from "next/link";
+import {getCities} from "../firebase/products";
+
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -97,6 +100,7 @@ export default function Home() {
         </div>
       </div>
       <Rowimg></Rowimg>
+      
       {/* <Image
         src="/images/planters.jpg"
         alt="Picture of the author"
